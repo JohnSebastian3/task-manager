@@ -10,7 +10,7 @@ require('dotenv').config();
      dbConnectionStr = process.env.DB_STRING,
      dbName = 'tasks';
 
-MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true})
+MongoClient.connect('mongodb+srv://DBUser:rdHQ18XHCIhc64lb@tasks.gec5b.mongodb.net/?retryWrites=true&w=majority', { useUnifiedTopology: true})
   .then(client => {
     console.log(`Connected to ${dbName} Database`);
     db = client.db(dbName);
